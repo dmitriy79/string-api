@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "custom",
+            "name": "Custom launch",
+            "targetCreateCommands": [
+                "target create ${workspaceFolder}/src/quaestord"
+            ],
+            "processCreateCommands": [
+                "settings set target.run-args -testnet -connect=3.16.47.232:8081 -daemon",
+                "process launch"
+            ]
+        }
+    ]
+}
